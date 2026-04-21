@@ -1,0 +1,10 @@
+[project]
+name = "geoengine"
+version = "0.1.0"
+description = "Interactive linear algebra and particle dynamics sandbox built in Python."
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
