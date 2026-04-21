@@ -1,29 +1,35 @@
-# GeoEngine
+# Proyecto-GeoEngine
 
-GeoEngine es un sandbox interactivo de algebra lineal y fisica de particulas construido en Python. La idea no es solo "mostrar una ventana", sino demostrar criterio de ingenieria: un nucleo matematico testeado, una separacion clara por modulos y una demo visual que comunica intuicion tecnica rapido.
+Este es un proyecto personal que hice para practicar algebra lineal, simulacion y organizacion de codigo en Python.
 
-## Por que este proyecto sirve para portfolio
+La idea fue no quedarme solo con ejercicios sueltos o notebooks, sino llevar esos conceptos a algo mas concreto: un mini motor con vectores, matrices, transformaciones 3D, proyeccion y una simulacion simple de particulas con colisiones.
 
-- Convierte conceptos de algebra lineal en una experiencia visual e interactiva.
-- Muestra modelado orientado a objetos, diseno modular y validacion automatizada.
-- Une matematica, simulacion y presentacion de producto en un repo chico pero serio.
-- Tiene un modo visual para demo y un modo headless para inspeccion automatizada.
+Mi objetivo con este proyecto fue trabajar fundamentos que me interesan para mi camino hacia ingenieria de IA: matematica aplicada, modelado, simulacion, estructura de software y visualizacion.
 
-## Que incluye
+## Que hace
 
-- `geoengine/algebra/`: vectores 3D y matrices 3x3 con operaciones geometricas y algebraicas.
-- `geoengine/physics/`: particulas con masa, impulsos, gravedad y colisiones.
-- `geoengine/rendering/`: proyeccion de puntos 3D a pantalla.
-- `geoengine/app.py`: dashboard Tkinter con escenas de transformaciones y fisica.
-- `geoengine/report.py`: resumen headless para validacion rapida o CI.
+- Implementa vectores 3D y matrices 3x3 desde cero.
+- Permite trabajar con rotaciones, escala, shear, determinante e inversa.
+- Simula particulas con masa, gravedad, rebotes y colisiones por impulso.
+- Incluye una interfaz visual en Tkinter para explorar transformaciones y fisica.
+- Tiene tests para validar el nucleo matematico y fisico.
 
-## Demo local
+## Estructura
+
+- `geoengine/algebra/`: vectores y matrices
+- `geoengine/physics/`: particulas, mundo y colisiones
+- `geoengine/rendering/`: proyeccion de puntos 3D
+- `geoengine/app.py`: demo visual
+- `geoengine/report.py`: modo headless para inspeccionar resultados
+- `tests/`: pruebas automatizadas
+
+## Como ejecutarlo
 
 ```powershell
 .\.venv\Scripts\python.exe main.py
 ```
 
-## Reporte headless
+## Modo reporte
 
 ```powershell
 .\.venv\Scripts\python.exe main.py --report
@@ -35,32 +41,21 @@ GeoEngine es un sandbox interactivo de algebra lineal y fisica de particulas con
 .\.venv\Scripts\python.exe -m pytest -q
 ```
 
-## Arquitectura
+## Que quise mostrar con este proyecto
 
-```text
-geoengine/
-  algebra/
-  physics/
-  rendering/
-  app.py
-  cli.py
-  report.py
-  scenes.py
-tests/
-main.py
-```
+- Que puedo implementar conceptos matematicos sin depender completamente de librerias externas.
+- Que puedo organizar un proyecto pequeno con una estructura clara y mantenible.
+- Que me interesa entender lo que hay debajo de motores, simulaciones y herramientas visuales.
+- Que puedo convertir teoria en algo interactivo y presentable.
 
-## Temas tecnicos para contar en una entrevista
+## Cosas que me gustaria seguir agregando
 
-- Como modelar rotaciones, escala y shear con matrices 3x3.
-- Como resolver colisiones de particulas usando impulso y conservacion aproximada de momento.
-- Como desacoplar el nucleo matematico del render y de la UI.
-- Como disenar una demo que funcione tanto en modo visual como en modo headless.
+- matrices 4x4 y camara libre
+- quaternions
+- una version web para que se pueda probar online
+- export de animaciones o GIFs
+- simulaciones mas complejas
 
-## Proximos upgrades fuertes
+## Nota personal
 
-- Matrices 4x4 y camara libre
-- quaternions para orientacion
-- export de frames o GIFs
-- escenas con sistemas de particulas mas grandes
-- integradores numericos mas avanzados
+Todavia sigo estudiando y este proyecto forma parte de ese proceso. Lo hice con la idea de aprender en serio, no solo de llegar a un resultado visual. Si lo estas viendo como recruiter, para mi representa bastante bien como pienso: me gusta entender fundamentos, construir cosas desde abajo y despues llevarlas a algo usable.
